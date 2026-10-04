@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alimentos saludables</title>
+    <link rel="stylesheet" href="alimentos_saludables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="alimentos_saludables.js" defer></script>
+</head>
+<body>
+    <!----------------------------------------->
+    <!--|estructuracion_alimentos_saludables|-->
+    <!----------------------------------------->
+    <header class="encabezado">
+        <div class="icono_encabezado">
+            <i class="fa-solid fa-apple-whole"></i>
+        </div>
+
+        <div>
+            <span class="etiqueta">ALIMENTACIÓN SALUDABLE</span>
+            <h1>Alimentos Saludables</h1>
+            <p>Descubre algunos alimentos que puedes incluir en tu alimentación.</p>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="contenedor">
+
+        <!-- Introducción -->
+        <section class="introduccion">
+            <i class="fa-solid fa-leaf"></i>
+
+            <div>
+                <h2>Galería saludable</h2>
+                <p>
+                    Conoce cinco alimentos y personaliza su información.
+                </p>
+            </div>
+        </section>
+
+        <!-- Galería de alimentos -->
+        <section class="galeria" id="galeria">
+
+            <!-- Alimento 1 -->
+            <article class="alimento" data-id="1">
+                <div class="imagen_alimento">
+                    <img class="imagen" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?auto=format&fit=crop&w=600&q=80" alt="Manzana">
+                    <span><i class="fa-solid fa-heart"></i></span>
+                </div>
+
+                <div class="contenido_alimento">
+                    <input type="text" class="nombre" value="Manzana">
+                    <textarea class="descripcion">Fruta rica en fibra y vitaminas.</textarea>
+                    <input type="url" class="url_imagen" value="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?auto=format&fit=crop&w=600&q=80">
+
+                    <div class="acciones">
+                        <button class="guardar">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            Guardar
+                        </button>
+
+                        <button class="restaurar">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            Restaurar
+                        </button>
+                    </div>
+
+                    <p class="mensaje"></p>
+                </div>
+            </article>
+
+            <!-- Alimento 2 -->
+            <article class="alimento" data-id="2">
+                <div class="imagen_alimento">
+                    <img class="imagen" src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Ensalada">
+                    <span><i class="fa-solid fa-seedling"></i></span>
+                </div>
+
+                <div class="contenido_alimento">
+                    <input type="text" class="nombre" value="Ensalada">
+                    <textarea class="descripcion">Combinación de vegetales frescos y nutritivos.</textarea>
+                    <input type="url" class="url_imagen" value="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80">
+
+                    <div class="acciones">
+                        <button class="guardar">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            Guardar
+                        </button>
+
+                        <button class="restaurar">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            Restaurar
+                        </button>
+                    </div>
+
+                    <p class="mensaje"></p>
+                </div>
+            </article>
+
+            <!-- Alimento 3 -->
+            <article class="alimento" data-id="3">
+                <div class="imagen_alimento">
+                    <img class="imagen" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=600&q=80" alt="Piña">
+                    <span><i class="fa-solid fa-sun"></i></span>
+                </div>
+
+                <div class="contenido_alimento">
+                    <input type="text" class="nombre" value="Piña">
+                    <textarea class="descripcion">Fruta tropical refrescante y rica en vitamina C.</textarea>
+                    <input type="url" class="url_imagen" value="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=600&q=80">
+
+                    <div class="acciones">
+                        <button class="guardar">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            Guardar
+                        </button>
+
+                        <button class="restaurar">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            Restaurar
+                        </button>
+                    </div>
+
+                    <p class="mensaje"></p>
+                </div>
+            </article>
+
+            <!-- Alimento 4 -->
+            <article class="alimento" data-id="4">
+                <div class="imagen_alimento">
+                    <img class="imagen" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Vegetales">
+                    <span><i class="fa-solid fa-carrot"></i></span>
+                </div>
+
+                <div class="contenido_alimento">
+                    <input type="text" class="nombre" value="Vegetales">
+                    <textarea class="descripcion">Fuente de vitaminas, minerales y fibra.</textarea>
+                    <input type="url" class="url_imagen" value="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80">
+
+                    <div class="acciones">
+                        <button class="guardar">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            Guardar
+                        </button>
+
+                        <button class="restaurar">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            Restaurar
+                        </button>
+                    </div>
+
+                    <p class="mensaje"></p>
+                </div>
+            </article>
+
+            <!-- Alimento 5 -->
+            <article class="alimento" data-id="5">
+                <div class="imagen_alimento">
+                    <img class="imagen" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Yogur">
+                    <span><i class="fa-solid fa-bowl-food"></i></span>
+                </div>
+
+                <div class="contenido_alimento">
+                    <input type="text" class="nombre" value="Yogur natural">
+                    <textarea class="descripcion">Alimento que puede aportar proteínas y calcio.</textarea>
+                    <input type="url" class="url_imagen" value="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80">
+
+                    <div class="acciones">
+                        <button class="guardar">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            Guardar
+                        </button>
+
+                        <button class="restaurar">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            Restaurar
+                        </button>
+                    </div>
+
+                    <p class="mensaje"></p>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Restablecer todos -->
+        <section class="zona_restablecer">
+            <button id="restablecerTodos">
+                <i class="fa-solid fa-trash"></i>
+                Restablecer todos los alimentos
+            </button>
+        </section>
+
+    </main>
+</body>
+</html>
