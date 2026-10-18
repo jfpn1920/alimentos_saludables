@@ -1,24 +1,17 @@
-/*------------------------------------*/
-/*--|configuracion_general|-----------*/
-/*------------------------------------*/
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
     background: #f2f6ef;
     color: #26352b;
     min-height: 100vh;
 }
-
-/*------------------------------------*/
-/*--|encabezado|----------------------*/
-/*------------------------------------*/
-
+/*---------------------------------*/
+/*--|estilo_alimentos_saludables|--*/
+/*---------------------------------*/
 .encabezado {
     background: #24452d;
     color: white;
@@ -27,7 +20,6 @@ body {
     align-items: center;
     gap: 20px;
 }
-
 .icono_encabezado {
     width: 70px;
     height: 70px;
@@ -38,38 +30,27 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 31px;
+    flex-shrink: 0;
 }
-
 .etiqueta {
     color: #e8b84b;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 2px;
 }
-
 .encabezado h1 {
     margin: 5px 0;
     font-size: 32px;
 }
-
 .encabezado p {
     color: #d0dbd2;
+    line-height: 1.5;
 }
-
-/*------------------------------------*/
-/*--|contenedor|----------------------*/
-/*------------------------------------*/
-
 .contenedor {
     width: 90%;
     max-width: 1150px;
     margin: 40px auto;
 }
-
-/*------------------------------------*/
-/*--|introduccion|--------------------*/
-/*------------------------------------*/
-
 .introduccion {
     background: white;
     padding: 25px;
@@ -80,7 +61,6 @@ body {
     margin-bottom: 30px;
     box-shadow: 0 7px 22px rgba(36, 69, 45, 0.07);
 }
-
 .introduccion > i {
     width: 55px;
     height: 55px;
@@ -91,50 +71,42 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 24px;
+    flex-shrink: 0;
 }
-
 .introduccion h2 {
     margin-bottom: 5px;
 }
-
 .introduccion p {
     color: #68736b;
+    line-height: 1.5;
 }
-
-/*------------------------------------*/
-/*--|galeria|-------------------------*/
-/*------------------------------------*/
-
 .galeria {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
 }
-
-/*------------------------------------*/
-/*--|alimento|------------------------*/
-/*------------------------------------*/
-
 .alimento {
     background: white;
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 7px 22px rgba(36, 69, 45, 0.08);
+    min-width: 0;
 }
-
 .imagen_alimento {
     height: 210px;
     position: relative;
     overflow: hidden;
 }
-
 .imagen {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.3s ease;
 }
-
+.alimento:hover .imagen {
+    transform: scale(1.04);
+}
 .imagen_alimento span {
     position: absolute;
     top: 15px;
@@ -149,15 +121,12 @@ body {
     justify-content: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
-/*------------------------------------*/
-/*--|contenido_alimento|--------------*/
-/*------------------------------------*/
-
+/*-------------------------------*/
+/*--|estilo_contenido_alimento|--*/
+/*-------------------------------*/
 .contenido_alimento {
     padding: 20px;
 }
-
 .nombre {
     width: 100%;
     border: none;
@@ -168,12 +137,11 @@ body {
     color: #24452d;
     outline: none;
     margin-bottom: 12px;
+    background: transparent;
 }
-
 .nombre:focus {
     border-color: #65a66d;
 }
-
 .descripcion {
     width: 100%;
     min-height: 75px;
@@ -185,16 +153,11 @@ body {
     color: #59635c;
     outline: none;
     margin-bottom: 12px;
+    line-height: 1.5;
 }
-
 .descripcion:focus {
     border-color: #65a66d;
 }
-
-/*------------------------------------*/
-/*--|url_imagen|----------------------*/
-/*------------------------------------*/
-
 .url_imagen {
     width: 100%;
     padding: 10px;
@@ -203,21 +166,16 @@ body {
     font-size: 12px;
     outline: none;
     margin-bottom: 15px;
+    color: #26352b;
 }
-
 .url_imagen:focus {
     border-color: #65a66d;
 }
-
-/*------------------------------------*/
-/*--|acciones|------------------------*/
-/*------------------------------------*/
-
 .acciones {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
-
 .acciones button,
 .zona_restablecer button {
     border: none;
@@ -229,46 +187,52 @@ body {
     align-items: center;
     justify-content: center;
     gap: 6px;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
-
 .guardar {
     background: #42834d;
     color: white;
 }
-
+.guardar:hover {
+    background: #326b3c;
+}
 .restaurar {
     background: #e5ebe5;
     color: #334b38;
 }
-
+.restaurar:hover {
+    background: #d5dfd5;
+}
+.acciones button:focus-visible,
+.zona_restablecer button:focus-visible {
+    outline: 3px solid #e8b84b;
+    outline-offset: 3px;
+}
 .acciones button:hover,
 .zona_restablecer button:hover {
     transform: translateY(-2px);
 }
-
-/*------------------------------------*/
-/*--|mensaje|-------------------------*/
-/*------------------------------------*/
-
 .mensaje {
     min-height: 18px;
     color: #42834d;
     font-size: 13px;
     margin-top: 10px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
 }
-
-/*------------------------------------*/
-/*--|restablecer|---------------------*/
-/*------------------------------------*/
-
+/*------------------------*/
+/*--|estilo_restablecer|--*/
+/*------------------------*/
 .zona_restablecer {
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
-
 .zona_restablecer button {
     background: #26352b;
     color: white;
     padding: 14px 20px;
+}
+.zona_restablecer button:hover {
+    background: #17251b;
 }
